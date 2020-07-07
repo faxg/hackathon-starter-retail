@@ -2,11 +2,13 @@
   import { getContext, onMount } from 'svelte';
   import { Router, Link, Route } from 'svelte-routing';
   import { ROUTER } from 'svelte-routing/src/contexts';
+  
   import AuthLogin from './AuthLogin.svelte';
   import AuthLogout from './AuthLogout.svelte';
 
   const { activeRoute } = getContext(ROUTER);
   let userInfo = undefined;
+
   const providers = [ 'github', 'twitter', 'aad', 'google', 'facebook'];
 
   onMount(async () => (userInfo = await getUserInfo()));
