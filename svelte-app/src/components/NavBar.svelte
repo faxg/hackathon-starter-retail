@@ -7,7 +7,7 @@
 
   const { activeRoute } = getContext(ROUTER);
   let userInfo = undefined;
-  const providers = ['twitter', 'github', 'aad', 'google', 'facebook'];
+  const providers = [ 'github', 'twitter', 'aad', 'google', 'facebook'];
 
   onMount(async () => (userInfo = await getUserInfo()));
 
@@ -34,13 +34,21 @@
   }
 </script>
 
+
+
 <div class="column is-2">
   <nav class="menu">
     <p class="menu-label">Menu</p>
     <ul class="menu-list">
       <Link to="/home" {getProps}>Home</Link>
       <Link to="/products" {getProps}>My List</Link>
-      <Link to="/discounts" {getProps}>My Discounts</Link>
+      <!-- <Link to="/discounts" {getProps}>My Discounts</Link> -->
+      <Link to="/vision" {getProps}>Custom Vision</Link>
+      <Link to="/formrecognizer" {getProps}>FormRecognizer</Link>
+      <Link to="/chatbot" {getProps}>Chatbot</Link>
+      <Link to="/maps" {getProps}>Bing Maps</Link>
+      <Link to="/spatialanchors" {getProps}>Spatial Anchors</Link>
+      <Link to="/visualsearch" {getProps}>Visual Search</Link>
     </ul>
   </nav>
   <nav class="menu auth">

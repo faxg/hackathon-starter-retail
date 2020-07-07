@@ -9,4 +9,13 @@
   }
 </script>
 
-<div class="auth-link" on:click={goAuth}>{provider}</div>
+<div class="auth-link" alt="log in with {provider}" on:click={goAuth}>
+  {#if ['github','twitter','facebook'].includes(provider)}
+    <i class="fab fa-{provider}-square" aria-hidden="true"></i>
+  {:else if provider == 'google'}
+    <i class="fab fa-google" aria-hidden="true"></i>
+  {:else if provider == 'aad'}
+    <i class="fab fa-microsoft" aria-hidden="true"></i>
+
+  {/if}
+</div>
