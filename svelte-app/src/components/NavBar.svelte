@@ -53,7 +53,7 @@
       <Link to="/visualsearch" {getProps}>Visual Search</Link>
     </ul>
   </nav>
-  <nav class="menu auth">
+  <!-- <nav class="menu auth">
     <p class="menu-label">Auth</p>
     <div class="menu-list auth">
       {#if !userInfo}
@@ -66,6 +66,7 @@
       {/if}
     </div>
   </nav>
+  -->
   {#if userInfo}
     <div class="user">
       <p>Welcome</p>

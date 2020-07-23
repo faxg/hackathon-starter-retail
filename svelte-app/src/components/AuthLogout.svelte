@@ -7,4 +7,6 @@
   }
 </script>
 
+
+
 <div class="auth-link" on:click={goAuth}>Logout</div>

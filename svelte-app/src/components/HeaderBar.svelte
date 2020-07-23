@@ -42,13 +42,17 @@
           -->
           
             {#if !userInfo}
-              Login: 
+              Login with:  
               {#each providers as provider (provider)}
                 <AuthLogin {provider} /> &nbsp;
               {/each}
             {/if}
             {#if userInfo}
-              <AuthLogout />
+            <div class="user">
+                {userInfo && userInfo.userDetails} 
+                - {userInfo && userInfo.identityProvider}
+                <AuthLogout />
+            </div>
             {/if}
           </div>
         </div>
