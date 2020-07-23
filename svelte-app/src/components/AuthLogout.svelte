@@ -9,4 +9,4 @@
 
 
 
-<div class="auth-link" on:click={goAuth}>Logout</div>
+<div class="is-dark auth-link" on:click={goAuth}>Logout</div>

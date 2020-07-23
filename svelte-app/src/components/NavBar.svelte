@@ -40,6 +40,13 @@
 
 <div class="column is-2">
   <nav class="menu">
+    {#if userInfo}
+    <div class="user">
+      <p class="menu-label">Welcome</p>
+      <p>{userInfo && userInfo.userDetails}</p>
+      <p>you logged in via {userInfo && userInfo.identityProvider}</p>
+    </div>
+  {/if}
     <p class="menu-label">Menu</p>
     <ul class="menu-list">
       <Link to="/home" {getProps}>Home</Link>
@@ -67,11 +74,5 @@
     </div>
   </nav>
   -->
-  {#if userInfo}
-    <div class="user">
-      <p>Welcome</p>
-      <p>{userInfo && userInfo.userDetails}</p>
-      <p>{userInfo && userInfo.identityProvider}</p>
-    </div>
-  {/if}
+
 </div>

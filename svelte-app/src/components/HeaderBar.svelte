@@ -48,11 +48,11 @@
               {/each}
             {/if}
             {#if userInfo}
-            <div class="user">
+    <!--        <div class="user">
                 {userInfo && userInfo.userDetails} 
                 - {userInfo && userInfo.identityProvider}
+      -->
                 <AuthLogout />
-            </div>
             {/if}
           </div>
         </div>
