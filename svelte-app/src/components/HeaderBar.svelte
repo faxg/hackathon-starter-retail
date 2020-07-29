@@ -7,8 +7,8 @@
   // info on currently logged in user (undefined if not logged in)
   let userInfo = undefined;
   // available list of social login providers (supported by Azure Statis Web Apps)
-  const providers = [ 'github', 'twitter', 'aad', 'google', 'facebook'];
-  // when DOM is mounted, fetch user info 
+  const providers = ['github', 'twitter', 'aad', 'google', 'facebook'];
+  // when DOM is mounted, fetch user info
   onMount(async () => (userInfo = await getUserInfo()));
 
   // returns the current user info, if authenticated/logged in. Undefined otherwise
@@ -23,41 +23,23 @@
       return undefined;
     }
   }
-
 </script>
 
-<header>
-  <nav
-    class="navbar has-background-light is-light"
-    role="navigation"
-    aria-label="main navigation">
-    <HeaderBarBrand />
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="">
-          <!--<a href="#" class="button is-primary">
-            <strong>Sign up</strong>
-          </a>
-          <a href="#" class="button is-light">Log in</a>
-          -->
-          
-            {#if !userInfo}
-              Login with:  
-              {#each providers as provider (provider)}
-                <AuthLogin {provider} /> &nbsp;
-              {/each}
-            {/if}
-            {#if userInfo}
-    <!--        <div class="user">
-                {userInfo && userInfo.userDetails} 
-                - {userInfo && userInfo.identityProvider}
-      -->
-                <AuthLogout />
-            {/if}
-          </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+
+    {#if !userInfo}
+      <span class="navbar-brand mb-0 h1">Login:  
+        <div class="btn-group" role="group" aria-label="Social Login">
+          {#each providers as provider (provider)}
+            <AuthLogin {provider} />
+          {/each}
         </div>
+        </span>
+    {:else if userInfo && userInfo.userDetails}
+      {userInfo.userDetails} (logged in via '{userInfo.identityProvider}')
+      <p />
+      <AuthLogout />
+    {/if}
 
-    </div>
-
-  </nav>
-</header>
+  
+</nav>

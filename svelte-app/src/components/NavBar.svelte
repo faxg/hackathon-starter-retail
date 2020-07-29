@@ -38,41 +38,29 @@
 
 
 
-<div class="column is-2">
-  <nav class="menu">
-    {#if userInfo}
-    <div class="user">
-      <p class="menu-label">Welcome</p>
-      <p>{userInfo && userInfo.userDetails}</p>
-      <p>you logged in via {userInfo && userInfo.identityProvider}</p>
+<nav id="sidebar">
+
+  <div class="sidebar-header">
+    <h3>Migros <span class="dark">Hackathon</span> Starter</h3>
+  </div>
+
+  {#if userInfo}
+    <div>
+      <p>Welcome <b>{userInfo && userInfo.userDetails}</b></p>
+      <p>(logged in via '{userInfo && userInfo.identityProvider}')</p>
     </div>
   {/if}
-    <p class="menu-label">Menu</p>
-    <ul class="menu-list">
-      <Link to="/home" {getProps}>Home</Link>
-      <Link to="/products" {getProps}>My List</Link>
-      <!-- <Link to="/discounts" {getProps}>My Discounts</Link> -->
-      <Link to="/vision" {getProps}>Custom Vision</Link>
-      <Link to="/formrecognizer" {getProps}>FormRecognizer</Link>
-      <Link to="/chatbot" {getProps}>Chatbot</Link>
-      <Link to="/maps" {getProps}>Bing Maps</Link>
-      <Link to="/spatialanchors" {getProps}>Spatial Anchors</Link>
-      <Link to="/visualsearch" {getProps}>Visual Search</Link>
-    </ul>
-  </nav>
-  <!-- <nav class="menu auth">
-    <p class="menu-label">Auth</p>
-    <div class="menu-list auth">
-      {#if !userInfo}
-        {#each providers as provider (provider)}
-          <AuthLogin {provider} />
-        {/each}
-      {/if}
-      {#if userInfo}
-        <AuthLogout />
-      {/if}
-    </div>
-  </nav>
-  -->
 
-</div>
+  <ul class="list-unstyled components">
+    <li ><Link to="/home" {getProps}>Home</Link></li>
+    <li ><Link to="/products" {getProps}>My List</Link></li>
+    <li ><Link to="/vision" {getProps}>Custom Vision</Link></li>
+    <li ><Link to="/formrecognizer" {getProps}>FormRecognizer</Link></li>
+    <li ><Link to="/chatbot" {getProps}>Chatbot</Link></li>
+    <li ><Link to="/maps" {getProps}>Bing Maps</Link></li>
+    <li ><Link to="/spatialanchors" {getProps}>Spatial Anchors</Link></li>
+    <li ><Link to="/visualsearch" {getProps}>Visual Search</Link></li>
+  </ul>
+</nav>
+
+

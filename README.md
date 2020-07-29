@@ -1,10 +1,18 @@
-# Static Web Apps
+# Migros Hackathon Starter Template 
 
-This repository contains apps that can be used with as a starting point for some MS Learn Modules. because everyone has their own preference for their JavaScript frameworks/library, you can choose which one you prefer.
+This repository is a starter template, originally designed for the Migros Hack Challenge __"Digital Product Twins"__ at HackZurich 2020.
 
-The Shop at Home theme is used throughout the app. View it live at <https://www.shopathome.dev>
+It uses Azure Static Web Apps, and gives you in 2 minutes flat:
+- A functional, production ready example web app
+- CI/CD pipeline using GitHub Actions 
+- Social login integration using Github, Twitter
+- Azure Functions serverless backend API
+- Support for a custom domain / TLS certificate
 
-[![Deploy to Azure button](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/?feature.customportal=false&WT.mc_id=build2020_swa-github-jopapa#create/Microsoft.StaticApp)
+
+View a demo live at <https://migros-starter.faxg.net>
+
+[![Deploy to Azure button](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/?feature.customportal=false#create/Microsoft.StaticApp)
 
 ## Learn how
 
@@ -30,9 +38,18 @@ The apps written in the following JavaScript frameworks/libraries:
 - The [Azure Functions extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions?WT.mc_id=shopathome-github-jopapa) installed
 - The [Azure Functions Core Tools](https://docs.microsoft.com/azure/azure-functions/functions-run-local?WT.mc_id=shopathome-github-jopapa) installed
 
+
+## Migros Data Access
+If you want to access the Migros Data APIs, you'll need to have an API key.
+- You'll get the key in your Challenge Starter Box.
+- put the key in the file ``api/.env``, or configure it as ``MIGROS_API_KEY`` in the Azure portal
+- Make sure not to commit the key into source control / GitHub.
+
+
+
 ## Problems or Suggestions
 
-[Open an issue here](https://github.com/johnpapa/shopathome/issues)
+[Open an issue here](https://github.com/faxg/retail-starter/issues)
 
 ## Resources
 

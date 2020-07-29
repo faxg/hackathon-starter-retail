@@ -8,7 +8,7 @@ Learn how to [Publish an Angular, React, Svelte, or Vue JavaScript app and API w
 
 ## Getting Started
 
-1. Create a repository from this template repository <https://github.com/johnpapa/shopathome/generate>
+1. Create a repository from this template repository <https://github.com/faxg/retail-starter/generate>
 
 1. Enter the name of your new repository as _mslearn-staticwebapp_
 
