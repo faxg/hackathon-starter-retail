@@ -1,19 +1,31 @@
-import ButtonFooter from './ButtonFooter.svelte';
-import CardContent from './CardContent.svelte';
-import HeaderBar from './HeaderBar.svelte';
-import ListHeader from './ListHeader.svelte';
-import Modal from './Modal.svelte';
 import NavBar from './NavBar.svelte';
+import SideBar from './SideBar.svelte';
+
 import PageNotFound from './PageNotFound.svelte';
 import Redirect from './Redirect.svelte';
 
+
+import MigrosData from './migros-data.svelte';
+
+
+import CustomVision from './azure-custom-vision.svelte';
+import FormRecognizer from './azure-form-recognizer.svelte';
+import Chatbot from './azure-chatbot.svelte';
+import BingMaps from './azure-bing-maps.svelte';
+import SpatialAnchors from './azure-spatial-anchors.svelte';
+
+
+
+
 export {
-  ButtonFooter,
-  CardContent,
-  HeaderBar,
-  ListHeader,
-  Modal,
   NavBar,
+  SideBar,
   PageNotFound,
-  Redirect
+  Redirect,
+  MigrosData,
+  CustomVision,
+  FormRecognizer,
+  Chatbot,
+  BingMaps,
+  SpatialAnchors
 };

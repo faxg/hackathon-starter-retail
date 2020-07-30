@@ -1,66 +1,28 @@
-<script>
-  import { getContext, onMount } from 'svelte';
-  import { Router, Link, Route } from 'svelte-routing';
-  import { ROUTER } from 'svelte-routing/src/contexts';
-  
-  import AuthLogin from './AuthLogin.svelte';
-  import AuthLogout from './AuthLogout.svelte';
-
-  const { activeRoute } = getContext(ROUTER);
-  let userInfo = undefined;
-
-  const providers = [ 'github', 'twitter', 'aad', 'google', 'facebook'];
-
-  onMount(async () => (userInfo = await getUserInfo()));
-
-  async function getUserInfo() {
-    try {
-      const response = await fetch('/.auth/me');
-      const payload = await response.json();
-      const { clientPrincipal } = payload;
-      return clientPrincipal;
-    } catch (error) {
-      console.error('No profile could be found');
-      return undefined;
-    }
-  }
-
-  function getProps({ location, href, isPartiallyCurrent, isCurrent }) {
-    const isActive = href === '/' ? isCurrent : isPartiallyCurrent || isCurrent;
-
-    // The object returned here is spread on the anchor element's attributes
-    if (isActive) {
-      return { class: 'router-link-active' };
-    }
-    return {};
-  }
-</script>
-
-
-
-<nav id="sidebar">
-
-  <div class="sidebar-header">
-    <h3>Migros <span class="dark">Hackathon</span> Starter</h3>
-  </div>
-
-  {#if userInfo}
-    <div>
-      <p>Welcome <b>{userInfo && userInfo.userDetails}</b></p>
-      <p>(logged in via '{userInfo && userInfo.identityProvider}')</p>
+<nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
+        <ul class="nav navbar-nav flex-nowrap ml-auto">
+            <li class="nav-item" role="presentation"><a class="nav-link" href="logout.html">Logout</a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link" href="login.html">Login</a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link" href="register.html">Register</a></li>
+            <li class="nav-item dropdown d-sm-none no-arrow"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><i class="fas fa-search"></i></a>
+                <div class="dropdown-menu dropdown-menu-right p-3 animated--grow-in" role="menu" aria-labelledby="searchDropdown">
+                    <form class="form-inline mr-auto navbar-search w-100">
+                        <div class="input-group"><input class="bg-light form-control border-0 small" type="text" placeholder="Search for ...">
+                            <div class="input-group-append"><button class="btn btn-primary py-0" type="button"><i class="fas fa-search"></i></button></div>
+                        </div>
+                    </form>
+                </div>
+            </li>
+            <div class="d-none d-sm-block topbar-divider"></div>
+            <li class="nav-item dropdown no-arrow" role="presentation">
+                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><span class="d-none d-lg-inline mr-2 text-gray-600 small">Valerie Luna</span><img class="border rounded-circle img-profile" src="/img/avatar1.jpeg"></a>
+                    <div
+                        class="dropdown-menu shadow dropdown-menu-right animated--grow-in" role="menu"><a class="dropdown-item" role="presentation" href="#"><i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Profile</a><a class="dropdown-item" role="presentation" href="#"><i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Settings</a>
+                        <a
+                            class="dropdown-item" role="presentation" href="#"><i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Activity log</a>
+                            <div class="dropdown-divider"></div><a class="dropdown-item" role="presentation" href="#"><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Logout</a></div>
     </div>
-  {/if}
-
-  <ul class="list-unstyled components">
-    <li ><Link to="/home" {getProps}>Home</Link></li>
-    <li ><Link to="/products" {getProps}>My List</Link></li>
-    <li ><Link to="/vision" {getProps}>Custom Vision</Link></li>
-    <li ><Link to="/formrecognizer" {getProps}>FormRecognizer</Link></li>
-    <li ><Link to="/chatbot" {getProps}>Chatbot</Link></li>
-    <li ><Link to="/maps" {getProps}>Bing Maps</Link></li>
-    <li ><Link to="/spatialanchors" {getProps}>Spatial Anchors</Link></li>
-    <li ><Link to="/visualsearch" {getProps}>Visual Search</Link></li>
-  </ul>
+    </li>
+    </ul>
+</div>
 </nav>
-
-

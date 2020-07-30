@@ -1,85 +1,113 @@
 <script>
   import { Router, Link, Route } from 'svelte-routing';
-
 </script>
 
-<div class="container">
-  <div >
-    <h2 class="title">Migros Hackathon Starter</h2>
-    <div>
-    Welcome to the Migros Hackathon Starter. This is a demo application that uses Azure Static Web Apps, Azure Functions and several Azure Cognitive Services.
-      It also demonstrates how to access and use some of the Migros Data sources.
-
-
-      <h3 class="title">Getting Started</h3>
-      This app can be deployed by generating your own GitHub repo from a template repository.
-      <ul class="list">
-        <li>Go to ... and create your own repo by clicking </li>
-        <li>Click the Deploy to Azure Button and create a new Azure Static Web App</li>
-        <li>Use the following settings to configure on the Azure portal: </li>
-        <li>Now go to your IDE (like VS.code), git clone your repo</li>
-        <li>Add your MIGROS_API_KEY to ...</li>
-        <li>`git commit` and `git push` to Github. This will trigger the GH action to deploy the app</li>
-        <li> Go to the url of your new app, and use it
-      </ul>
-
-    </div>  
-
-    <h3>Configure Data Access</h3>
-    Data access to the Migros REST and GraphQL APIs need an API Key. 
-    You should have gotten the key with your starter box.
-
-
-    <h3>Azure Cognitive Services</h3>
-    There are several demo pages that leverage Azure Cognitive Services.
-    <ul>
-      <li>Getting started with Azure Cognitive Services</li>
-      <li>Building a chatbot with Azure Bot Service</li>
-      <li>Detect objects with Custom Vision</li>
-      <li>Form Recognizer</li>
-      <li>Bing Maps</li>
-      <li>Visual Search</li>
-    </ul>
-   
-    <h3 class="title">Augmented Reality</h3>
-    Work with spatial anchors, e.g. "real world" points in AR Applications (Wayfinding)
-    Azure Spatial anchors
-
-    <ul>
-      <li>Getting started with Azure Cognitive Services</li>
-      <li>Building a chatbot with Azure Bot Service</li>
-      <li>Detect objects with Custom Vision</li>
-      <li>Form Recognizer</li>
-      <li>Bing Maps</li>
-      <li>Visual Search</li>
-    </ul>
-
+<div class="container-fluid">
+  <!-- Start: Chart -->
+  <div class="row">
+    <div class="col-lg-7 col-xl-8">
+      <div class="card shadow mb-4">
+        <div
+          class="card-header d-flex justify-content-between align-items-center">
+          <h6 class="text-primary font-weight-bold m-0">Congratulations !</h6>
+          <div class="dropdown no-arrow">
+            <button
+              class="btn btn-link btn-sm dropdown-toggle"
+              data-toggle="dropdown"
+              aria-expanded="false"
+              type="button">
+              <i class="fas fa-ellipsis-v text-gray-400" />
+            </button>
+            <div
+              class="dropdown-menu shadow dropdown-menu-right animated--fade-in"
+              role="menu">
+              <p class="text-center dropdown-header">dropdown header:</p>
+              <a class="dropdown-item" role="presentation" href="#">
+                &nbsp;Action
+              </a>
+              <a class="dropdown-item" role="presentation" href="#">
+                &nbsp;Another action
+              </a>
+              <div class="dropdown-divider" />
+              <a class="dropdown-item" role="presentation" href="#">
+                &nbsp;Something else here
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <p>
+            You have successfully deployed the Migros Hackathon Starter on
+            Azure.&nbsp;
+            <br />
+            You now have the following:
+            <br />
+          </p>
+          <ul>
+            <li>Azure Static Web Apps (SWA)</li>
+            <li>Azure Functions Serverless backend (/api)</li>
+            <li>
+              CI/CD pipeline with GitHub Actions. Triggered on
+              <em>git push or PR</em>
+              &nbsp;
+              <em>to master branch</em>
+            </li>
+            <li>Links to API docs for the Migros Datasets</li>
+            <li>Links to documentation of Azure Cognitive Services</li>
+          </ul>
+          <h3>Challenge Video</h3>
+          <iframe
+            allowfullscreen=""
+            frameborder="0"
+            src="https://www.youtube.com/embed/zYNspQScGfw"
+            width="560"
+            height="315" />
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-5 col-xl-4">
+      <div class="card shadow mb-4">
+        <div
+          class="card-header d-flex justify-content-between align-items-center">
+          <h6 class="text-primary font-weight-bold m-0">Step-by-Step</h6>
+          <div class="dropdown no-arrow">
+            <button
+              class="btn btn-link btn-sm dropdown-toggle"
+              data-toggle="dropdown"
+              aria-expanded="false"
+              type="button">
+              <i class="fas fa-ellipsis-v text-gray-400" />
+            </button>
+            <div
+              class="dropdown-menu shadow dropdown-menu-right animated--fade-in"
+              role="menu">
+              <p class="text-center dropdown-header">dropdown header:</p>
+              <a class="dropdown-item" role="presentation" href="#">
+                &nbsp;Action
+              </a>
+              <a class="dropdown-item" role="presentation" href="#">
+                &nbsp;Another action
+              </a>
+              <div class="dropdown-divider" />
+              <a class="dropdown-item" role="presentation" href="#">
+                &nbsp;Something else here
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <p>How to get up &amp; running:</p>
+          <ul>
+            <li>Configure MIGROS_API_KEY</li>
+            <li>Connect Azure Cognitive Services</li>
+            <li>Configure Azure Static Web App</li>
+            <li>Familiarize yourself</li>
+            <li>Build on top of this...</li>
+          </ul>
+          <p>More info...</p>
+        </div>
+      </div>
+    </div>
   </div>
+  <!-- End: Chart -->
 </div>
-<!--
-    <div class="button-group">
-      <button class="button" aria-label="My List" tabindex="0">
-        <Link to="/products">
-          <i class="fas fa-clipboard-list" />
-          My product list
-        </Link>
-      </button>
-
-      <button class="button" aria-label="My Discounts">
-        <Link to="/discounts">
-          <i class="fas fa-money-bill-alt" />
-          My Discounts
-        </Link>
-      </button>
-
-      <button class="button" aria-label="Github repo">
-        <a
-          href="https://github.com/johnpapa/shopathome"
-          target="_blank"
-          rel="noopener noreferrer">
-          <i class="fab fa-github" />
-          Code in GitHub
-        </a>
-      </button>
-    </div>-->
-
