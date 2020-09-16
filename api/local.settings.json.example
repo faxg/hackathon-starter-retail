@@ -1,0 +1,12 @@
+{
+    "IsEncrypted": false,
+    "Values": {
+      "AzureWebJobsStorage": "",
+      "FUNCTIONS_WORKER_RUNTIME": "node",
+      "Migros:ApiKey": "",
+      "Migros:ApiUser": ""
+    },
+    "Host": {
+      "CORS": "http://localhost:3000,http://localhost:4200,http://localhost:5000,http://localhost:8080"
+    }
+  }

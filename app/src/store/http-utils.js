@@ -1,3 +1,7 @@
+/**
+ * Parse an http response 
+ * @param {*} response 
+ */
 export const parseList = async (response) => {
   if (response.status !== 200)
     throw Error(response.message || `Error, status ${response.status}`);

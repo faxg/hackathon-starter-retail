@@ -9,14 +9,6 @@
       "statusCode": "404"
     },
     {
-      "route": "/api/discounts",
-      "allowedRoles": ["preferred"]
-    },
-    {
-      "route": "/api/x/*",
-      "allowedRoles": ["preferred"]
-    },
-    {
       "route": "/api/*",
       "allowedRoles": ["authenticated"]
     },

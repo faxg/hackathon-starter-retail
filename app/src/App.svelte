@@ -7,6 +7,7 @@
   import { NavBar, SideBar, PageNotFound, Redirect } from './components';
   import {
     MigrosData,
+    MigrosProductSearch,
     CustomVision,
     FormRecognizer,
     Chatbot,
@@ -42,6 +43,12 @@
         <Route path="/chatbot" component={Chatbot} />
         <Route path="/maps" component={BingMaps} />
         <Route path="/spatialanchors" component={SpatialAnchors} />
+
+        <Route path="/productsearch" component={MigrosProductSearch} />
+
+        <!--
+          <Route path="/scandit" component={Scandit} />
+        -->
 
 
         <Route path="**" component={PageNotFound} />

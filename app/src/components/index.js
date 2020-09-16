@@ -6,7 +6,7 @@ import Redirect from './Redirect.svelte';
 
 
 import MigrosData from './migros-data.svelte';
-
+import MigrosProductSearch from './migros-product-search.svelte';
 
 import CustomVision from './azure-custom-vision.svelte';
 import FormRecognizer from './azure-form-recognizer.svelte';
@@ -23,6 +23,7 @@ export {
   PageNotFound,
   Redirect,
   MigrosData,
+  MigrosProductSearch,
   CustomVision,
   FormRecognizer,
   Chatbot,

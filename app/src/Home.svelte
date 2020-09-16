@@ -5,106 +5,95 @@
 <div class="container-fluid">
   <!-- Start: Chart -->
   <div class="row">
-    <div class="col-lg-7 col-xl-8">
+    <div class="col-lg-6 col-xl-7">
       <div class="card shadow mb-4">
         <div
           class="card-header d-flex justify-content-between align-items-center">
-          <h6 class="text-primary font-weight-bold m-0">Congratulations !</h6>
-          <div class="dropdown no-arrow">
-            <button
-              class="btn btn-link btn-sm dropdown-toggle"
-              data-toggle="dropdown"
-              aria-expanded="false"
-              type="button">
-              <i class="fas fa-ellipsis-v text-gray-400" />
-            </button>
-            <div
-              class="dropdown-menu shadow dropdown-menu-right animated--fade-in"
-              role="menu">
-              <p class="text-center dropdown-header">dropdown header:</p>
-              <a class="dropdown-item" role="presentation" href="#">
-                &nbsp;Action
-              </a>
-              <a class="dropdown-item" role="presentation" href="#">
-                &nbsp;Another action
-              </a>
-              <div class="dropdown-divider" />
-              <a class="dropdown-item" role="presentation" href="#">
-                &nbsp;Something else here
-              </a>
-            </div>
-          </div>
+          <h6 class="text-primary font-weight-bold m-0">Welcome</h6>
         </div>
         <div class="card-body">
-          <p>
-            You have successfully deployed the Migros Hackathon Starter on
-            Azure.&nbsp;
-            <br />
-            You now have the following:
-            <br />
-          </p>
+          Welcome to the <b>Migros Hackathon Starter</b> on Azure.&nbsp; <br /> This
+          is an example application that serves multiple purposes:
           <ul>
-            <li>Azure Static Web Apps (SWA)</li>
-            <li>Azure Functions Serverless backend (/api)</li>
             <li>
-              CI/CD pipeline with GitHub Actions. Triggered on
-              <em>git push or PR</em>
-              &nbsp;
-              <em>to master branch</em>
+              <b>Frontend</b>: a website that contains links to docs on the
+              Migros Hackathon API and selected Azure Cloud Services. Written in <a
+                href="https://svelte.dev/">Svelte</a>, but many frameworks are
+              supported (Angular, React, ...)
             </li>
-            <li>Links to API docs for the Migros Datasets</li>
-            <li>Links to documentation of Azure Cognitive Services</li>
+            <li>
+              <b>Example API</b>: Serverless (Azure Functions) backend <code>/api</code>
+              that retrieves data from the Migros data stores. Written in JavaScript
+              / NodeJS
+            </li>
           </ul>
-          <h3>Challenge Video</h3>
-          <iframe
-            allowfullscreen=""
-            frameborder="0"
-            src="https://www.youtube.com/embed/zYNspQScGfw"
-            width="560"
-            height="315" />
+          You can clone & deploy this to Azure in 5 minutes. You'll get: <img class="img-fluid" width="100%" alt="SWA Overview" src="https://azurecomcdn.azureedge.net/cvt-4abbf0604519d6747e8628e7d4a627c7bc7d78cea01076877c54698df471f916/images/page/services/app-service/static/value-prop-2.png" />
+          <small><a href="https://aka.ms/staticwebapps">Learn more about Azure
+              Static Web Apps (SWA)</a></small>
         </div>
       </div>
     </div>
-    <div class="col-lg-5 col-xl-4">
+    <div class="col-lg-6 col-xl-5">
       <div class="card shadow mb-4">
         <div
           class="card-header d-flex justify-content-between align-items-center">
           <h6 class="text-primary font-weight-bold m-0">Step-by-Step</h6>
-          <div class="dropdown no-arrow">
-            <button
-              class="btn btn-link btn-sm dropdown-toggle"
-              data-toggle="dropdown"
-              aria-expanded="false"
-              type="button">
-              <i class="fas fa-ellipsis-v text-gray-400" />
-            </button>
-            <div
-              class="dropdown-menu shadow dropdown-menu-right animated--fade-in"
-              role="menu">
-              <p class="text-center dropdown-header">dropdown header:</p>
-              <a class="dropdown-item" role="presentation" href="#">
-                &nbsp;Action
-              </a>
-              <a class="dropdown-item" role="presentation" href="#">
-                &nbsp;Another action
-              </a>
-              <div class="dropdown-divider" />
-              <a class="dropdown-item" role="presentation" href="#">
-                &nbsp;Something else here
-              </a>
-            </div>
-          </div>
         </div>
         <div class="card-body">
-          <p>How to get up &amp; running:</p>
-          <ul>
-            <li>Configure MIGROS_API_KEY</li>
-            <li>Connect Azure Cognitive Services</li>
-            <li>Configure Azure Static Web App</li>
-            <li>Familiarize yourself</li>
-            <li>Build on top of this...</li>
-          </ul>
+          <p>Clone & run this app! It's a good base for your hack project</p>
+          <ol>
+            <li>
+              Clone Github template repository: <a href="https://aka.ms/MigrosHackRepo"> https://aka.ms/MigrosHackRepo </a>
+            </li>
+            <li>Click "Deploy to Azure" button</li>
+            <li>
+              Add Credentials to your <code>/api/local.settings.json</code>
+            </li>
+            <li>Run & debug locally</li>
+            <li>Push changes to master branch</li>
+            <li>Watch the Github Actions CD pipline</li>
+            <li>Your new Static Web App in the Azure Portal</li>
+            <li>Next steps</li>
+          </ol>
           <p>More info...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Next row -->
+
+  <div class="row">
+    <div class="col-lg-6 col-xl-7">
+      <div class="card shadow mb-4">
+        <div
+          class="card-header d-flex justify-content-between align-items-center">
+          <h6 class="text-primary font-weight-bold m-0">Challenge Video</h6>
+        </div>
+        <div class="card-body">
+          <h3>Migros "Digital Product Twin" Challenge</h3>
+          <!-- svelte-ignore a11y-missing-attribute -->
+          <iframe
+            src="https://www.youtube.com/embed/LY_zvKKctgQ"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            width="100%"
+            height="315" />
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-xl-5">
+      <div class="card shadow mb-4">
+        <div
+          class="card-header d-flex justify-content-between align-items-center">
+          <h6 class="text-primary font-weight-bold m-0">Tech Talk</h6>
+        </div>
+        <div class="card-body">
+          <h3>Azure Static Web Apps Tech Talk</h3>
+          <br />We will have a Tech Talk on Azure Static Web Apps (SWA) on
+          Saturday: <i>Saturday, 19.09., 11:00 - 11:25 (CEST), Auditorium &
+            Online</i>
         </div>
       </div>
     </div>
