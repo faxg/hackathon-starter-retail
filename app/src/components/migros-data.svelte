@@ -16,7 +16,7 @@
             
             Here's the <a
               href="https://hackzurich-api.migros.ch/doc/index.html">API docs
-              (Products and Discounts)</a> and <a href=">https://hackzurich-api.migros.ch/hack/doc">Sales
+              (Products and Discounts)</a> and <a href="https://hackzurich-api.migros.ch/hack/doc">Sales
               Data, Recipes and Store-/Shelf-Layout</a>
           </p>
         </div>

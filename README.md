@@ -10,7 +10,7 @@ It uses Azure Static Web Apps, and gives you in 2 minutes flat:
 - Support for a custom domain / TLS certificate
 
 
-View a demo live at <https://migros-starter.faxg.net>
+View a demo live at <https://aka.ms/MigrosHackathonStarter>
 
 [![Deploy to Azure button](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/?feature.customportal=false#create/Microsoft.StaticApp)
 
