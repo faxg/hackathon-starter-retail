@@ -31,6 +31,9 @@ We use (https://Svelte.dev) here as an example, but you can use e.g. Angular, Re
    ```
 
 ## Resources
+[Adding Authentication and Authorization to an Azure Static Web App]
+(https://blog.baeke.info/2020/06/02/adding-authentication-and-authorization-to-an-azure-static-web-app/)
+
 
 ### Azure Static Web Apps
 

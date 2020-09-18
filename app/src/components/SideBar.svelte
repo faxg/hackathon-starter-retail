@@ -2,6 +2,15 @@
   import { getContext, onMount } from 'svelte';
   import { Router, Link, Route } from 'svelte-routing';
   import { ROUTER } from 'svelte-routing/src/contexts';
+  
+  import getUserInfo from '../store/auth-utils'
+
+
+
+  // when ready, load user profile info
+  let userInfo = undefined;
+  onMount(async () => (userInfo = await getUserInfo()));
+
 
   const { activeRoute } = getContext(ROUTER);
 
@@ -71,6 +80,7 @@
     </ul>
     
     <!-- authorized user section START -->
+    {#if userInfo}
     <div>
       <hr>
       <ul class="nav navbar-nav text-light">
@@ -82,7 +92,9 @@
       </li>
       </ul>
     </div>
+    {/if}
     <!-- authorized user section END -->
+
 
   </div>
 </nav>

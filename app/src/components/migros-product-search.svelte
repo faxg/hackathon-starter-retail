@@ -65,7 +65,9 @@
               
               <div class="row align-items-center no-gutters">
                 <!-- Product image -->
-                <img alt="{product.description}" class="img-responsive" src="{product.image_transparent.original}" height="75px" />
+                {#if product.image_transparent}
+                  <img alt="{product.description}" class="img-responsive" src="{product.image_transparent.original}" height="75px" />
+                {/if}
               </div>
 
             </div>
