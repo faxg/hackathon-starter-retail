@@ -42,11 +42,11 @@
                 href="#"><span
                 class="d-none d-lg-inline mr-2 text-gray-600 small">{userInfo.userDetails}</span><img
                 class="border rounded-circle img-profile"
-                src="/img/avatar1.jpeg" /></a>
+                src="/img/shrug.png" /></a>
             <div
                 class="dropdown-menu shadow dropdown-menu-right animated--grow-in"
                 role="menu">
-                <a class="dropdown-item" role="presentation" href="#"><i
+                <a class="dropdown-item" role="presentation" href="/.auth/me"><i
                     class="fas fa-user fa-sm fa-fw mr-2 text-gray-400" />&nbsp;Profile</a><a
                 class="dropdown-item"
                 role="presentation"
