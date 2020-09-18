@@ -1,0 +1,15 @@
+{
+    "IsEncrypted": false,
+    "Values": {
+      "AzureWebJobsStorage": "",
+      "FUNCTIONS_WORKER_RUNTIME": "node",
+      "NODE_TLS_REJECT_UNAUTHORIZED" : "1",
+      "MigrosApiPassword": "...",
+      "MigrosApiUsername": "...",
+      "MigrosApiVersion": "7",
+      "MigrosApiEndpoint": "https://hackzurich-api.migros.ch"
+    },
+    "Host": {
+      "CORS": "http://localhost:3000,http://localhost:4200,http://localhost:5000,http://localhost:8080"
+    }
+  }
