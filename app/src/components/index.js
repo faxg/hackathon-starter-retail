@@ -1,3 +1,5 @@
+import CardComponent from './CardComponent.svelte'
+
 import NavBar from './NavBar.svelte';
 import SideBar from './SideBar.svelte';
 
@@ -26,6 +28,7 @@ import SpatialAnchors from './azure-spatial-anchors.svelte';
 
 
 export {
+  CardComponent,
   NavBar,
   SideBar,
   PageNotFound,

@@ -1,3 +1,7 @@
+<script>
+  import CardComponent from './CardComponent.svelte';
+</script>
+
 <div class="container-fluid">
   <div class="row" style="padding-bottom: 15px;">
     <div class="col">
@@ -12,13 +16,20 @@
           <p class="m-0">
             From the Migros/Microsoft team, you'll get an API username and
             password. Use this with <code>HTTP Basic Auth</code> to access the REST
-            API under the endpoint <a href="https://hackzurich-api.migros.ch">https://hackzurich-api.migros.ch</a> 
-            
-            Here's the <a
-              href="https://hackzurich-api.migros.ch/doc/index.html">API docs
-              (Products and Discounts)</a> and <a href="https://hackzurich-api.migros.ch/hack/doc">Sales
-              Data, Recipes and Store-/Shelf-Layout</a>
+            API under the endpoint at <code>https://hackzurich-api.migros.ch</code>
           </p>
+
+          Here're the docs:
+          <ul>
+            <li>
+              <a href="https://hackzurich-api.migros.ch/doc/index.html">API docs
+                (Products and Discounts)</a>
+            </li>
+            <li>
+              <a href="https://hackzurich-api.migros.ch/hack/doc">Sales Data,
+                Recipes and Store/Shelf Layout</a>
+            </li>
+          </ul>
         </div>
       </div>
       <!-- End: Basic Card -->
@@ -30,13 +41,12 @@
           </h6>
         </div>
         <div class="card-body">
-            
-
           <ol>
-              <li> <h5>Configure <code>/api/local.settings.json</code></h5> <br>
-                All Values will be available as environment variables (e.g. <code>{` MigrosApiEndpoint `}</code>) during LOCAL runtime.
-
-                <pre>{`
+            <li>
+              <h5>Configure <code>/api/local.settings.json</code></h5>
+              <br /> All Values will be available as environment variables (e.g.
+              <code>{` MigrosApiEndpoint `}</code>) during LOCAL runtime.
+              <pre>{`
 {
     "IsEncrypted": false,
     "Values": {
@@ -53,162 +63,113 @@
 }
                 `}
                 </pre>
-                </li>
-              <li><h5>Sync/update your application settings with Azure </h5>
-                Credentials in <code>/api/local.settings.json</code> are of course NOT commited to the Git repository.
-                However, you may want to sync them with your Azure Application Settings deployment.
-                One easy way to do this is using the VS.code Azure Functions Extension:
-                <code> Static Web Apps > [YOUR APP] > [YOUR ENVIRONMENT] > Application Settings > Upload Local Settings </code>
-    </li>
+            </li>
+            <li>
+              <h5>Sync/update your application settings with Azure</h5>
+              Credentials in <code>/api/local.settings.json</code> are of course
+              NOT commited to the Git repository. However, you may want to sync them
+              with your Azure Application Settings deployment. One easy way to do
+              this is using the VS.code Azure Functions Extension: <code>
+                Static Web Apps > [YOUR APP] > [YOUR ENVIRONMENT] > Application
+                Settings > Upload Local Settings
+              </code>
+            </li>
           </ol>
-
         </div>
       </div>
       <!-- End: Basic Card -->
     </div>
-  </div>
-  <div class="row" style="padding-bottom: 15px;">
-    <div class="col">
-      <!-- Start: Card Primary -->
-      <div class="card shadow border-left-primary py-2">
-        <div class="card-body">
-          <div class="row align-items-center no-gutters">
-            <div class="col mr-2">
-              <div
-                class="text-uppercase text-primary font-weight-bold text-xs mb-1">
-                <span>POS Data</span>
-              </div>
-              <div class="text-dark font-weight-bold h5 mb-0">
-                <span>Point of Sale Data</span>
-              </div>
-            </div>
-            <div class="col-auto">
-              <i class="fas fa-shopping-cart fa-2x text-gray-300" />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <div>
-                <ul class="list-inline">
-                  <li class="list-inline-item">
-                    <a href="#">Documentation</a>
-                  </li>
-                  <li class="list-inline-item"><a href="#">API</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+
+    <div class="row" style="padding: 30px;">
+      <div class="col-4">
+        <CardComponent
+          border="primary"
+          icon="fa-search"
+          smallTitle="Product data"
+          bigTitle="Search for Migros Products"
+          links={[{ href: 'https://hackzurich-api.migros.ch/doc/index.html', text: 'Documentation' }, { href: 'https://hackzurich-api.migros.ch/products', text: 'API' }]} />
       </div>
-      <!-- End: Card Primary -->
-    </div>
-    <div class="col">
-      <!-- Start: Card Success -->
-      <div class="card shadow border-left-success py-2">
-        <div class="card-body">
-          <div class="row align-items-center no-gutters">
-            <div class="col mr-2">
-              <div
-                class="text-uppercase text-success font-weight-bold text-xs mb-1">
-                <span>Recipe Data</span>
-              </div>
-              <div class="text-dark font-weight-bold h5 mb-0">
-                <span>Incredients for Recipes</span>
-              </div>
-            </div>
-            <div class="col-auto">
-              <i class="fas fa-receipt fa-2x text-gray-300" />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <div>
-                <ul class="list-inline">
-                  <li class="list-inline-item">
-                    <a href="#">Documentation</a>
-                  </li>
-                  <li class="list-inline-item"><a href="#">API</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+
+      <div class="col-4">
+        <CardComponent
+          border="primary"
+          icon="fa-exclamation-circle"
+          smallTitle="Discount data"
+          bigTitle="Discounts on Products"
+          links={[{ href: 'https://hackzurich-api.migros.ch/doc/index.html', text: 'Documentation' }, { href: 'https://hackzurich-api.migros.ch/discounts', text: 'API' }]} />
       </div>
-      <!-- End: Card Success -->
-    </div>
-  </div>
-  <div class="row" style="padding-bottom: 15px;">
-    <div class="col">
-      <!-- Start: Card Warning -->
-      <div class="card shadow border-left-warning py-2">
-        <div class="card-body">
-          <div class="row align-items-center no-gutters">
-            <div class="col mr-2">
-              <div
-                class="text-uppercase text-warning font-weight-bold text-xs mb-1">
-                <span>Spatial Data</span>
-              </div>
-              <div class="text-dark font-weight-bold h5 mb-0">
-                <span>In-Store navigation data</span>
-              </div>
-            </div>
-            <div class="col-auto">
-              <i class="fas fa-route fa-2x text-gray-300" />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <div>
-                <ul class="list-inline">
-                  <li class="list-inline-item">
-                    <a href="#">Documentation</a>
-                  </li>
-                  <li class="list-inline-item"><a href="#">API</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+
+      <div class="col-4">
+        <CardComponent
+          border="primary"
+          icon="fa-cube"
+          smallTitle="Store Layout"
+          bigTitle="3D model of store layouts"
+          links={[{ href: 'https://hackzurich-api.migros.ch/hack/doc', text: 'Documentation' }, { href: 'https://hackzurich-api.migros.ch/hack/store/357?fmt=dwg', text: 'API' }]} />
       </div>
-      <!-- End: Card Warning -->
-    </div>
-    <div class="col">
-      <!-- Start: Card Info -->
-      <div class="card shadow border-left-info py-2">
-        <div class="card-body">
-          <div class="row align-items-center no-gutters">
-            <div class="col mr-2">
-              <div
-                class="text-uppercase text-info font-weight-bold text-xs mb-1">
-                <span>Shop Location</span>
-              </div>
-              <div class="row no-gutters align-items-center">
-                <div class="col-auto">
-                  <div class="text-dark font-weight-bold h5 mb-0 mr-3">
-                    <span>Geolocation data of our stores</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-auto">
-              <i class="fas fa-map-marker-alt fa-2x text-gray-300" />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <div>
-                <ul class="list-inline">
-                  <li class="list-inline-item">
-                    <a href="#">Documentation</a>
-                  </li>
-                  <li class="list-inline-item"><a href="#">API</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+
+      <div class="col-4">
+        <CardComponent
+          border="primary"
+          icon="fa-archive"
+          smallTitle="Shelf Layout"
+          bigTitle="Shelf visualization as PDF"
+          links={[{ href: 'https://hackzurich-api.migros.ch/hack/doc', text: 'Documentation' }, { href: 'https://hackzurich-api.migros.ch/hack/store/357/shelf/12', text: 'API' }]} />
       </div>
-      <!-- End: Card Info -->
+
+      <div class="col-4">
+        <CardComponent
+          border="primary"
+          icon="fa-history"
+          smallTitle="Purchases"
+          bigTitle="List of all purchases/shopping carts of customer"
+          links={[{ href: 'https://hackzurich-api.migros.ch/hack/doc', text: 'Documentation' }, { href: 'https://hackzurich-api.migros.ch/hack/purchase/102531', text: 'API' }]} />
+      </div>
+
+      <div class="col-4">
+        <CardComponent
+          border="primary"
+          icon="fa-info-circle"
+          smallTitle="Purchase Details"
+          bigTitle="Metadata of a single purchase"
+          links={[{ href: 'https://hackzurich-api.migros.ch/hack/doc', text: 'Documentation' }, { href: 'https://hackzurich-api.migros.ch/hack/purchase/102531/201901-102531-0006', text: 'API' }]} />
+      </div>
+
+      <div class="col-4">
+        <CardComponent
+          border="primary"
+          icon="fa-list"
+          smallTitle="Articles of Purchase"
+          bigTitle="Articles of a single purchase/cart"
+          links={[{ href: 'https://hackzurich-api.migros.ch/hack/doc', text: 'Documentation' }, { href: 'https://hackzurich-api.migros.ch/hack/purchase/102531/201901-102531-0006/articles', text: 'API' }]} />
+      </div>
+
+      <div class="col-4">
+        <CardComponent
+          border="success"
+          icon="fa-receipt"
+          smallTitle="Recipe Data"
+          bigTitle="Incredients for Recipes"
+          links={[{ href: 'https://hackzurich-api.migros.ch/hack/doc', text: 'Documentation' }, { href: 'https://hackzurich-api.migros.ch/hack/recipe/recipes_de/_search?q=Morcheln', text: 'API' }]} />
+      </div>
+
+      <div class="col-4">
+        <CardComponent
+          border="primary"
+          icon="fa-shopping-cart"
+          smallTitle="Bought"
+          bigTitle="Purchases/carts which include a certain article"
+          links={[{ href: 'https://hackzurich-api.migros.ch/hack/doc', text: 'Documentation' }, { href: 'https://hackzurich-api.migros.ch/hack/bought/104522200000', text: 'API' }]} />
+      </div>
+
+      <div class="col-4">
+        <CardComponent
+          border="warning"
+          icon="fa-shopping-cart"
+          smallTitle="Cart Data"
+          bigTitle="Bulk purchase/cart data"
+          links={[{ href: 'https://hackzurich-api.migros.ch/hack/doc', text: 'Documentation' }, { href: 'https://hackzurich-api.migros.ch/cartdata/201908', text: 'API' }]} />
+      </div>
     </div>
   </div>
 </div>
