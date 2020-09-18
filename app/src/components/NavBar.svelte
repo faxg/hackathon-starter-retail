@@ -1,8 +1,8 @@
 <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
     <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
         <ul class="nav navbar-nav flex-nowrap ml-auto">
-            <li class="nav-item" role="presentation"><a class="nav-link" href="logout.html">Logout</a></li>
-            <li class="nav-item" role="presentation"><a class="nav-link" href="login.html">Login</a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link" href="/logout">Logout</a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link" href="/login">Login</a></li>
             <li class="nav-item" role="presentation"><a class="nav-link" href="register.html">Register</a></li>
             <li class="nav-item dropdown d-sm-none no-arrow"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><i class="fas fa-search"></i></a>
                 <div class="dropdown-menu dropdown-menu-right p-3 animated--grow-in" role="menu" aria-labelledby="searchDropdown">

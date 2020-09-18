@@ -1,6 +1,14 @@
 {
   "routes": [
     {
+      "route": "/login",
+      "serve": "/.auth/login/github"
+    },
+    {
+      "route": "/logout",
+      "serve": "/.auth/logout"
+    },
+    {
       "route": "/.auth/login/facebook",
       "statusCode": "404"
     },

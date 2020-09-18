@@ -1,5 +1,5 @@
 /**
- * Parse an http response 
+ * Parse an http response. Expects a JSON object
  * @param {*} response 
  */
 export const parseList = async (response) => {
