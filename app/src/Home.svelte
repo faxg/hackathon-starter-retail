@@ -9,7 +9,7 @@
       <div class="card shadow mb-4">
         <div
           class="card-header d-flex justify-content-between align-items-center">
-          <h6 class="text-primary font-weight-bold m-0">Welcome</h6>
+          <h6 class="text-primary font-weight-bold m-0">Welcome HackZurich</h6>
         </div>
         <div class="card-body">
           Welcome to the <b>Migros Hackathon Starter</b> on Azure.&nbsp; <br /> This
